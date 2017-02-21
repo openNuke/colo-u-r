@@ -1,0 +1,4 @@
+http://www.brucelindbloom.com/ (linear)
+http://www.colorwiki.com/wiki/Test_Images (fuji)
+http://motion.kodak.com/ZA/en/motion/Support/Technical_Information/Lab_Tools_And_Techniques/Digital_LAD/default.htm (cineon)
+http://www.arri.com/camera/alexa/downloads/ (alexaLog3)
