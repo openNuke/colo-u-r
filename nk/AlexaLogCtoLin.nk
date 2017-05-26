@@ -1,0 +1,631 @@
+set cut_paste_input [stack 0]
+version 9.0 v8
+push $cut_paste_input
+Group {
+ name AlexaLogCtoLin
+ selected true
+ xpos 1107
+ ypos 6483
+ addUserKnob {20 User l AlexaLogCtoLin}
+ addUserKnob {41 direction T SwitchLinLog.direction}
+ addUserKnob {41 ASA T Switch.ASA}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 509
+  ypos -453
+ }
+ Dot {
+  name in
+  xpos 543
+  ypos -413
+ }
+set N2b7d26c0 [stack 0]
+ Dot {
+  name Dot69
+  xpos 1306
+  ypos -183
+ }
+set N6613250 [stack 0]
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA1
+  xpos 1976
+  ypos -56
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.013047
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.038625
+  addUserKnob {7 _c_}
+  _c_ 0.237781
+  addUserKnob {7 _d_}
+  _d_ 0.387093
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.16335
+  addUserKnob {7 _f_}
+  _f_ 0.092824
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA2
+  xpos 1813
+  ypos -60
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.012235
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.043137
+  addUserKnob {7 _c_}
+  _c_ 0.24081
+  addUserKnob {7 _d_}
+  _d_ 0.38659
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.229121
+  addUserKnob {7 _f_}
+  _f_ 0.09281
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA3
+  xpos 1686
+  ypos -54
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.011361
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.047996
+  addUserKnob {7 _c_}
+  _c_ 0.244161
+  addUserKnob {7 _d_}
+  _d_ 0.386036
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.301883
+  addUserKnob {7 _f_}
+  _f_ 0.092814
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA4
+  label default
+  xpos 1534
+  ypos -59
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.010591
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.052272
+  addUserKnob {7 _c_}
+  _c_ 0.24719
+  addUserKnob {7 _d_}
+  _d_ 0.385537
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.367655
+  addUserKnob {7 _f_}
+  _f_ 0.092809
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA5
+  xpos 1409
+  ypos -58
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.00984
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.056443
+  addUserKnob {7 _c_}
+  _c_ 0.250219
+  addUserKnob {7 _d_}
+  _d_ 0.38504
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.433426
+  addUserKnob {7 _f_}
+  _f_ 0.092805
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA6
+  xpos 1272
+  ypos -63
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.009031
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.060939
+  addUserKnob {7 _c_}
+  _c_ 0.253569
+  addUserKnob {7 _d_}
+  _d_ 0.384493
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.506188
+  addUserKnob {7 _f_}
+  _f_ 0.0928
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA7
+  xpos 1136
+  ypos -66
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.008318
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.064901
+  addUserKnob {7 _c_}
+  _c_ 0.256598
+  addUserKnob {7 _d_}
+  _d_ 0.383999
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.57196
+  addUserKnob {7 _f_}
+  _f_ 0.092795
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA8
+  xpos 981
+  ypos -55
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.007622
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.068768
+  addUserKnob {7 _c_}
+  _c_ 0.259627
+  addUserKnob {7 _d_}
+  _d_ 0.383508
+  addUserKnob {7 _e_}
+  _e_ 5.637732
+  addUserKnob {7 _f_}
+  _f_ 0.092791
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA9
+  xpos 856
+  ypos -61
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.006871
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.072941
+  addUserKnob {7 _c_}
+  _c_ 0.262978
+  addUserKnob {7 _d_}
+  _d_ 0.382966
+  addUserKnob {7 _e_}
+  _e_ 5.710494
+  addUserKnob {7 _f_}
+  _f_ 0.092786
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA10
+  xpos 722
+  ypos -67
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.006208
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.076621
+  addUserKnob {7 _c_}
+  _c_ 0.266007
+  addUserKnob {7 _d_}
+  _d_ 0.382478
+  addUserKnob {7 _e_}
+  _e_ 5.776265
+  addUserKnob {7 _f_}
+  _f_ 0.092782
+ }
+push $N6613250
+ Expression {
+  expr0 "(r > _e_ * cut + _f_) ? (pow(10, (r - _d_) / _c_) - _b_) / _a_: (r - _f_) / _e_"
+  expr1 "(g > _e_ * cut + _f_) ? (pow(10, (g- _d_) / _c_) - _b_) / _a_: (g - _f_) / _e_"
+  expr2 "(b > _e_ * cut + _f_) ? (pow(10, (b - _d_) / _c_) - _b_) / _a_: (b - _f_) / _e_"
+  expr3 a
+  name Log2Lin_ASA11
+  xpos 604
+  ypos -68
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.005561
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.080216
+  addUserKnob {7 _c_}
+  _c_ 0.269036
+  addUserKnob {7 _d_}
+  _d_ 0.381991
+  addUserKnob {7 _e_}
+  _e_ 5.842037
+  addUserKnob {7 _f_}
+  _f_ 0.092778
+ }
+ Switch {
+  inputs 11
+  which {{parent.Switch.which}}
+  name Switch2
+  label lin
+  xpos 1272
+  ypos 85
+  addUserKnob {20 User}
+  addUserKnob {4 ASA M {160 200 250 320 400 500 640 800 1000 1280 1600}}
+  ASA 1600
+ }
+push $N2b7d26c0
+ Dot {
+  name Dot67
+  xpos -272
+  ypos -207
+ }
+set N2c69b190 [stack 0]
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA1600
+  xpos 365
+  ypos -72
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.013047
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.038625
+  addUserKnob {7 _c_}
+  _c_ 0.237781
+  addUserKnob {7 _d_}
+  _d_ 0.387093
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.16335
+  addUserKnob {7 _f_}
+  _f_ 0.092824
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA1280
+  selected true
+  xpos 230
+  ypos -73
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.012235
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.043137
+  addUserKnob {7 _c_}
+  _c_ 0.24081
+  addUserKnob {7 _d_}
+  _d_ 0.38659
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.229121
+  addUserKnob {7 _f_}
+  _f_ 0.09281
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA1000
+  xpos 96
+  ypos -77
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.011361
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.047996
+  addUserKnob {7 _c_}
+  _c_ 0.244161
+  addUserKnob {7 _d_}
+  _d_ 0.386036
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.301883
+  addUserKnob {7 _f_}
+  _f_ 0.092814
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA800
+  label default
+  xpos -49
+  ypos -78
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.010591
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.052272
+  addUserKnob {7 _c_}
+  _c_ 0.24719
+  addUserKnob {7 _d_}
+  _d_ 0.385537
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.367655
+  addUserKnob {7 _f_}
+  _f_ 0.092809
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA640
+  xpos -181
+  ypos -80
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.00984
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.056443
+  addUserKnob {7 _c_}
+  _c_ 0.250219
+  addUserKnob {7 _d_}
+  _d_ 0.38504
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.433426
+  addUserKnob {7 _f_}
+  _f_ 0.092805
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA500
+  xpos -319
+  ypos -84
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.009031
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.060939
+  addUserKnob {7 _c_}
+  _c_ 0.253569
+  addUserKnob {7 _d_}
+  _d_ 0.384493
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.506188
+  addUserKnob {7 _f_}
+  _f_ 0.0928
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA400
+  xpos -458
+  ypos -88
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.008318
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.064901
+  addUserKnob {7 _c_}
+  _c_ 0.256598
+  addUserKnob {7 _d_}
+  _d_ 0.383999
+  addUserKnob {7 _e_ R 5 6}
+  _e_ 5.57196
+  addUserKnob {7 _f_}
+  _f_ 0.092795
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA320
+  xpos -596
+  ypos -85
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.007622
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.068768
+  addUserKnob {7 _c_}
+  _c_ 0.259627
+  addUserKnob {7 _d_}
+  _d_ 0.383508
+  addUserKnob {7 _e_}
+  _e_ 5.637732
+  addUserKnob {7 _f_}
+  _f_ 0.092791
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA250
+  xpos -725
+  ypos -89
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.006871
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.072941
+  addUserKnob {7 _c_}
+  _c_ 0.262978
+  addUserKnob {7 _d_}
+  _d_ 0.382966
+  addUserKnob {7 _e_}
+  _e_ 5.710494
+  addUserKnob {7 _f_}
+  _f_ 0.092786
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA200
+  xpos -844
+  ypos -86
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.006208
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.076621
+  addUserKnob {7 _c_}
+  _c_ 0.266007
+  addUserKnob {7 _d_}
+  _d_ 0.382478
+  addUserKnob {7 _e_}
+  _e_ 5.776265
+  addUserKnob {7 _f_}
+  _f_ 0.092782
+ }
+push $N2c69b190
+ Expression {
+  expr0 " (r > cut) ? _c_ * log10(_a_ * r + _b_) + _d_: _e_ * r + _f_"
+  expr1 " (g > cut) ? _c_ * log10(_a_ * g + _b_) + _d_: _e_ * g + _f_"
+  expr2 " (b > cut) ? _c_ * log10(_a_ * b + _b_) + _d_: _e_ * b + _f_"
+  expr3 a
+  name Lin2Log_ASA160
+  xpos -975
+  ypos -85
+  addUserKnob {20 User}
+  addUserKnob {7 cut}
+  cut 0.005561
+  addUserKnob {7 _a_}
+  _a_ 5.555556
+  addUserKnob {7 _b_}
+  _b_ 0.080216
+  addUserKnob {7 _c_}
+  _c_ 0.269036
+  addUserKnob {7 _d_}
+  _d_ 0.381991
+  addUserKnob {7 _e_}
+  _e_ 5.842037
+  addUserKnob {7 _f_}
+  _f_ 0.092778
+ }
+ Switch {
+  inputs 11
+  which {{ASA}}
+  name Switch
+  label log
+  xpos -319
+  ypos 54
+  addUserKnob {20 User}
+  addUserKnob {4 ASA M {160 200 250 320 400 500 640 "800  (default)" 1000 1280 1600 ""}}
+  ASA "800  (default)"
+ }
+ Switch {
+  inputs 2
+  which {{direction}}
+  name SwitchLinLog
+  xpos 503
+  ypos 279
+  addUserKnob {20 User}
+  addUserKnob {4 direction M {lin2log log2lin}}
+  direction log2lin
+ }
+ Dot {
+  name out
+  xpos 537
+  ypos 342
+ }
+ Output {
+  name Output1
+  xpos 503
+  ypos 450
+ }
+end_group
