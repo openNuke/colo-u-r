@@ -1,0 +1,108 @@
+set cut_paste_input [stack 0]
+version 9.0 v8
+push $cut_paste_input
+Group {
+ name bitdepthCheck
+ selected true
+ xpos -1386
+ ypos -432
+ addUserKnob {20 User l bitdepthCheck}
+ addUserKnob {41 bitdepth l "bit depth" T Switch1.bitdepth}
+ addUserKnob {26 ""}
+ addUserKnob {41 gain T Difference1.gain}
+ addUserKnob {41 output T Difference1.output}
+ addUserKnob {20 User_1 l info}
+ addUserKnob {26 created T "16/05/03 v1 Rafal Kaniewski"}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 458
+  ypos -243
+ }
+ Dot {
+  name Dot1
+  label in
+  xpos 492
+  ypos -203
+ }
+set N3fcb5cc0 [stack 0]
+ Dot {
+  name Dot2
+  xpos 229
+  ypos -194
+ }
+ Dot {
+  name Dot3
+  xpos 229
+  ypos 64
+ }
+push $N3fcb5cc0
+ Posterize {
+  channels rgb
+  Colors {{pow(2,32)}}
+  name Posterize2
+  label 32bit
+  xpos 618
+  ypos -112
+ }
+push $N3fcb5cc0
+ Posterize {
+  channels rgb
+  Colors {{pow(2,16)}}
+  name Posterize4
+  label 16bit
+  xpos 515
+  ypos -115
+ }
+push $N3fcb5cc0
+ Posterize {
+  channels rgb
+  Colors {{pow(2,10)}}
+  name Posterize3
+  label 10bit
+  xpos 407
+  ypos -108
+ }
+push $N3fcb5cc0
+ Posterize {
+  channels rgb
+  Colors {{pow(2,8)}}
+  name Posterize1
+  label 8bit
+  xpos 303
+  ypos -114
+ }
+ Switch {
+  inputs 4
+  which {{bitdepth}}
+  name Switch1
+  xpos 454
+  ypos -5
+  addUserKnob {20 User}
+  addUserKnob {68 bitdepth l "bit depth" M {8 10 16 32 ""}}
+  bitdepth 16
+ }
+ Difference {
+  inputs 2
+  gain 100000
+  name Difference1
+  xpos 454
+  ypos 54
+ }
+set Nbc56f60 [stack 0]
+ Output {
+  name Output1
+  xpos 454
+  ypos 154
+ }
+push $Nbc56f60
+ Viewer {
+  frame_range 1001-1069
+  gain 64
+  viewerProcess "SK_Film (sRGB)"
+  name Viewer1
+  xpos 458
+  ypos -217
+ }
+end_group
