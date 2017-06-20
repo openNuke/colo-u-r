@@ -1,0 +1,79 @@
+set cut_paste_input [stack 0]
+version 9.0 v8
+Constant {
+ inputs 0
+ channels rgb
+ format "65536 1000 0 0 65536 1000 1 16bitScanLine"
+ name Set_Width_to_lut_step
+ selected true
+ xpos 5731
+ ypos 12464
+ postage_stamp false
+}
+Expression {
+ expr0 x/(width-1)
+ expr1 x/(width-1)
+ expr2 x/(width-1)
+ name Expression3
+ selected true
+ xpos 5731
+ ypos 12518
+}
+NoOp {
+ name put_lut_here
+ selected true
+ xpos 5731
+ ypos 12579
+}
+Group {
+ name CineSpace1D_LutGenerator
+ tile_color 0x40ff0cff
+ label "\n"
+ note_font_color 0xf800c4ff
+ selected true
+ xpos 5731
+ ypos 12652
+ addUserKnob {20 User l "CineSpace 1D Lut"}
+ addUserKnob {41 channels T ColorLookup4.channels}
+ addUserKnob {41 sampler T ColorLookup4.sampler}
+ addUserKnob {41 normalize_x l "normalize x" -STARTLINE T ColorLookup4.normalize_x}
+ addUserKnob {41 sample_current l "Sample current frame" -STARTLINE T ColorLookup4.sample_current}
+ addUserKnob {41 lut l "" +STARTLINE T ColorLookup4.lut}
+ addUserKnob {7 lutRed l INVISIBLE +INVISIBLE}
+ addUserKnob {7 lutGreen l INVISIBLE +INVISIBLE}
+ addUserKnob {7 lutBlue l INVISIBLE +INVISIBLE}
+ addUserKnob {26 prelutHeader l "lut bounds"}
+ addUserKnob {1 metadata l METADATA}
+ metadata "name of lut goes here"
+ addUserKnob {7 rLowIn l "LUT lower bound" R -0.5 0.5}
+ addUserKnob {7 rHighIn l "LUT upper bound" R 1 20}
+ addUserKnob {3 lutSteps l "Lut Steps"}
+ lutSteps 65535
+ addUserKnob {26 txt5 l ( -STARTLINE T "8bit=256; 10bit=1024; 12bit=4096; 16bit=65535 )"}
+ addUserKnob {26 ""}
+ addUserKnob {2 cspOut l "csp Out" t "1D csp LUT output path"}
+ addUserKnob {22 cspGen l "create .csp" T "mainNode = nuke.thisNode()\n\n\nlowPoint = float(mainNode.knob('rLowIn').getValue())\nhighPoint = float(mainNode.knob('rHighIn').getValue())\nsteps = float(mainNode.knob('lutSteps').getValue())\nincrement = (highPoint - lowPoint)  / (steps - 1)\n\nredValues = \[]\nposition = lowPoint\nwhile position < (highPoint+ increment):\n  print position\n  redValues.append(mainNode.knob('lut').getValueAt(position,0))\n  position += increment\n\ngreenValues = \[]\nposition = lowPoint\nwhile position < (highPoint+ increment):\n  greenValues.append(mainNode.knob('lut').getValueAt(position,1))\n  position += increment\n\nblueValues = \[]\nposition = lowPoint\nwhile position < (highPoint+ increment):\n  blueValues.append(mainNode.knob('lut').getValueAt(position,2))\n  position += increment\n\nlen(redValues)\nprint redValues\nprint greenValues\nprint blueValues\n\n\ncsp =  'CSPLUTV100\\n1D\\n\\nBEGIN METADATA\\n'\ncsp += str(mainNode.knob('metadata').getValue())\ncsp += \"\\nThis LUT was created using Nuke Lookup -> CineSpace1D \" + str(mainNode.knob('version').getValue()) \ncsp += '\\nEND METADATA\\n'\n\ncsp += '\\n2\\n' \ncsp += str(lowPoint) + \" \" + str(highPoint) + \"\\n\"\ncsp += \"0.0  1.0\\n\"\n\ncsp += '\\n2\\n' \ncsp += str(lowPoint) + \" \" + str(highPoint) + \"\\n\"\ncsp += \"0.0  1.0\\n\"\n\ncsp += '\\n2\\n' \ncsp += str(lowPoint) + \" \" + str(highPoint) + \"\\n\"\ncsp += \"0.0  1.0\\n\"\n\ncsp += \"\\n\"\n\ncsp += str(len(redValues)) + \"\\n\"\n\nlutStep = 0\nwhile lutStep < len(redValues):\n  csp += str(redValues\[lutStep]) + \" \" + str(greenValues\[lutStep]) + \" \" + str(blueValues\[lutStep]) + \"\\n\"\n  lutStep += 1\n\n\ntempLut = mainNode.knob('cspOut').getValue()\noutf = open(tempLut,'w')\noutf.write(csp)\noutf.close()\n\n\n\n\n\n\n\n\n\n\n" +STARTLINE}
+ addUserKnob {20 info}
+ addUserKnob {26 version l "current version" T v1.2}
+ addUserKnob {26 created l created: T "12/01/15 Alex Fry v1.1"}
+ addUserKnob {26 modified l modified: T "16/6/20 Rafal Kaniewski v1.2"}
+}
+ Input {
+  inputs 0
+  name Input1
+  xpos 462
+  ypos 277
+ }
+ Sampler {
+  name ColorLookup4
+  label "non normalized"
+  selected true
+  xpos 462
+  ypos 332
+ }
+ Output {
+  name Output1
+  xpos 462
+  ypos 417
+ }
+end_group
