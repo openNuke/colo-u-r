@@ -1,0 +1,12 @@
+set cut_paste_input [stack 0]
+version 9.0 v8
+push $cut_paste_input
+Expression {
+ expr0 "y==ceil(r(x,1)*height) ? 1 : r"
+ expr1 "y==ceil(g(x,1)*height) ? 1 :g"
+ expr2 "y==ceil(g(x,1)*height) ? 1 :b"
+ name PlotCurve
+ selected true
+ xpos 14011
+ ypos 849
+}
