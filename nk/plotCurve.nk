@@ -2,11 +2,35 @@ set cut_paste_input [stack 0]
 version 9.0 v8
 push $cut_paste_input
 Expression {
+ expr0 x/(width-1)
+ expr1 x/(width-1)
+ expr2 x/(width-1)
+ expr3 y==1?1:0
+ name Expression7
+ selected true
+ xpos 1032
+ ypos 7802
+}
+Premult {
+ name Premult6
+ selected true
+ xpos 1032
+ ypos 7828
+}
+push 0
+Merge2 {
+ inputs 2
+ name Merge7
+ selected true
+ xpos 1142
+ ypos 7828
+}
+Expression {
  expr0 "y==ceil(r(x,1)*height) ? 1 : r"
  expr1 "y==ceil(g(x,1)*height) ? 1 :g"
  expr2 "y==ceil(g(x,1)*height) ? 1 :b"
- name PlotCurve
+ name PlotCurve2
  selected true
- xpos 14011
- ypos 849
+ xpos 1143
+ ypos 7920
 }
